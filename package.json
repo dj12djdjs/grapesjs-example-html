@@ -4,13 +4,9 @@
   "description": "[Github Code](https://github.com/vijayshukla30/grapesjs-example-html",
   "main": "server.js",
   "type":"module",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:dev": "nodemon index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
