@@ -1,12 +1,12 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import path from 'path';
-import uiRoute from './ui/ui.route';
-import pageRoute from './page/page.route';
-import assetRoute from './assets/assets.route';
-import projectRoute from './project/project.route';
-import renderHtml from './render/render.controller';
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const path = require('path');
+const uiRoute = require('./ui/ui.route');
+const pageRoute = require('./page/page.route');
+const assetRoute = require('./assets/assets.route');
+const projectRoute = require('./project/project.route');
+const renderHtml = require('./render/render.controller');
 //Initialize App
 const app = express();
 app.use(express.json());
@@ -44,7 +44,7 @@ app.use('/api/assets', assetRoute);
 app.use('/api/', uiRoute);
 app.get('/:pageId?', renderHtml);
 
-const PORT = process.env.APP_PORT || 8080;
+const PORT = 80;
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
 });
